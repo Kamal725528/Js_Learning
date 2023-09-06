@@ -1,2 +1,2 @@
 # Js_Learning
-practice javascript
+practice javascript in github to use its codespace feature.
