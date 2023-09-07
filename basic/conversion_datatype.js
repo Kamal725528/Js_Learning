@@ -69,3 +69,4 @@ console.log("2"===2) // false   // === strictly check compare datatype as well a
 
 
 
+
