@@ -13,6 +13,9 @@ console.log(name[0]);
 console.log(name.toUpperCase());
 console.log(name.length);
 
+console.log(name.charAt(2));
+console.log(name.indexOf('m'));
+
 console.log(name.substr(0,4));   // here 4 is excluded and 0 is included, it doesn't take negative value it simply ignore unlike slice
 
 console.log(name.slice(-3));  // from reverse.
