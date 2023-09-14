@@ -42,4 +42,39 @@ console.log(narray);  // [0,4,5,10]
 /* slice only slice the array and return the copy where range excluded but splice make change in original array it cut the
    array where range is included */
 
-   
+let marvel=["spiderman", "thor","hulk","ironman"];
+let dc=["superman","flash","batman"]
+
+// marvel.push(dc);  // inside marvel array dc array
+// console.log(marvel)
+
+let hero=marvel.concat(dc);// all element in one array
+console.log(marvel);
+console.log(hero);
+
+//     spread operator ...
+let allhero=[...marvel, ...dc, "heroes"]
+console.log(allhero);
+
+let arr=[1,2,3,[4,5,6], 7,[1,2,[3,4,5]]];
+let newarr=arr.flat(Infinity);   // infinity is depth like arr inside arr inside...
+
+console.log(newarr);
+
+let myarr="hitesh";
+console.log(Array.isArray(myarr));  //false
+console.log(Array.from(myarr));   //  [ 'h', 'i', 't', 'e', 's', 'h' ]
+
+let narr={1:"a", 2:"b", 3:"c"}
+console.log(Array.from(narr));   // empty arr because unable to read iterable obj
+console.log(Array.from(Object.keys(narr))); // array of key
+console.log(Array.from(Object.values(narr)));
+
+
+let score1=100;
+let score2=200;
+let score3=300;
+let score=Array.of(score1,score2,score3);
+console.log(score);  //  [ 100, 200, 300 ]
+
+
