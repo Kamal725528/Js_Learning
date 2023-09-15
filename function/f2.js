@@ -39,3 +39,24 @@ console.log(myArrow6(5));  //  if one argument no need to put paranthesis
 let fun=()=>({user:"kamal"})
 console.log(fun());
 
+// ************  Immediately invoked function expression (IIFE)  *************
+
+// used to solve the pollution problem of global scope and want to run while load e.g.. db connection 
+
+(function db(){
+    console.log("DB connected")
+})();
+
+// (funcn defn)(call)--  ()()
+
+// semi-colon in last is mandatory when write more than one IIFE otherwise error.
+
+(()=>console.log("Db connected in arrow funcn"))();
+
+(function db2(db){
+    console.log(`DB connected in ${db}`)
+})('mysql');
+
+((name)=>console.log(`name is ${name}`))("kamal");
+
+
