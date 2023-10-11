@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom learning 4</title>
+</head>
+<body style="background-color:black; color:#fff; ">
+
+    <ul class="language">
+        <li>Java</li>
+    </ul>
+
+    <script>
+        
+        function addlang(lang){
+            const li=document.createElement('li');
+            li.innerHTML=`${lang}`;
+            document.querySelector('.language').appendChild(li);
+        }
+
+        addlang("python");
+        addlang("golang")
+
+        function addoptilang(lang){
+            const li=document.createElement('li');
+            li.appendChild(document.createTextNode(lang));
+            document.querySelector('.language').appendChild(li);
+        }
+
+        addoptilang("javascript")
+
+        //edit
+
+        const second=document.querySelector('li:nth-child(2)')
+        console.log(second)
+        const newli=document.createElement('li');
+        newli.innerHTML="mojo";
+        second.replaceWith(newli)
+
+        //edit
+
+        const firstlang=document.querySelector('li:first-child');
+        firstlang.outerHTML="<li>hello</li>";
+
+        //remove
+        const last=document.querySelector('li:last-child')
+        last.remove();
+
+
+    </script>
+    
+
+</body>
+    
+
+</html>
