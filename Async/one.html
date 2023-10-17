@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Async learning</title>
+</head>
+<body >
+    <h1>I am learning </h1>
+    <button id="btn">stop</button>
+
+    <script>
+
+    // setTimeout(()=>console.log('kamal'), 3000);
+
+    // <!-- or -->
+      
+    // const myfunc=function(){
+    //     console.log('you are kamal Nayan')
+    // }
+
+    // setTimeout(myfunc,3000); 
+    // console.log("hello i am called ");
+
+    const change=function(){
+        document.querySelector('h1').innerHTML='I learned it';
+    }
+
+    const changeText=setTimeout(change, 3000);   //one time run after 3 sec
+
+    console.log('hello there');
+
+    document.querySelector('#btn').addEventListener('click',(e)=>{
+        clearTimeout(changeText);
+        console.log('cleared');
+    })
+
+   
+ //-----setInterval runcontinously after some period
+
+ const f1=function(str){
+    console.log(`hey i am running ${str}`)
+ }
+
+ const run=setInterval(f1, 3000, 'hello') // 3rd option is optional
+
+ document.querySelector('#btn').addEventListener('click',(e)=>{
+    clearInterval(run);
+    console.log('stop');
+ })
+
+</script>
+       
+        
+</body>
+</html>
