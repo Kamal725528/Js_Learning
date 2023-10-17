@@ -202,6 +202,75 @@ function startGame() {
 
 
 
+## 5.
+
+```javascript
+
+// console.log('Project 5');
+
+const output=document.querySelector('#insert');
+
+window.addEventListener('keydown',(e)=>{
+  output.innerHTML=`
+  
+  <div class='color'>
+   <table>
+   <tr>
+     <th>Key</th>
+     <th>Key-code</th>
+     <th>code</th>
+   </tr>
+   <tr>
+     <td>${e.key ==' '?"space":e.key}</td>
+     <td>${e.keyCode}</td>
+     <td>${e.code}</td>
+   </tr>
+  </table>
+</div>`;
+})
+
+
+```
+
+
+## 6.
+
+```javascript
+
+
+const start=document.querySelector('#start');
+const stop=document.querySelector('#stop');
+
+const colorGen=function(){
+  const hex='0123456789ABCDEF'
+  let color='#'
+  for(let i=0;i<6;i++){
+    color +=hex[Math.floor(Math.random() *16)];
+  }
+  console.log(color);
+  return color;
+}
+let st=function(){
+  document.body.style.backgroundColor=colorGen();
+}
+
+let interval;
+let change=function(){
+  interval=setInterval(st,2000);
+}
+
+let stopchange=function(){
+  clearInterval(interval);
+  console.log('stop');
+}
+
+start.addEventListener('click',change);
+stop.addEventListener('click', stopchange);
+
+```
+
+
+
 
 
 
