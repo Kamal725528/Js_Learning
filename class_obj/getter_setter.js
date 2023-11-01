@@ -1,22 +1,23 @@
-// class user{
+class user{
 
-//     constructor(){
-//     }
+    constructor(){
 
-//     set email(value){
-//         this._email=value;
-//     }
+    }
+    
+    set email(value){
+        this._email=value;
+    }
 
-//     get email(){
-//         return this._email;
-//     }
-// }
+    get email(){
+        return this._email;
+    }
+}
 
-// let u=new user();
-// // u.email('abc.gmail.com'); // email() is not a function it's a setter property
-// u.email='abc.gmail.com'; // calls the setter property
-// // console.log(u.email()); //  email() is not a function it's a getter property
-// console.log(u.email);  // calls the getter property
+let u=new user();
+// u.email('abc.gmail.com'); // email() is not a function it's a setter property
+u.email='abc.gmail.com'; // calls the setter property
+// console.log(u.email()); //  email() is not a function it's a getter property
+console.log(u.email);  // calls the getter property
 
 
 /* When you use this.email, it's a public property that can be accessed and modified directly from outside the object.
