@@ -21,7 +21,7 @@ then the <p> element's click event.
             -formEvent:-  focus, submit, blur, change
             -windowEvent:- load, resize, unload
 
-    if add on before all the event then it act as eventlistner  */
+    if add "on" before all the event then it act as eventlistner  */
 
 
     
